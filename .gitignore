@@ -1,0 +1,25 @@
+# .idea folder (IntelliJ IDEA settings)
+.idea/
+
+# IntelliJ project files
+*.iml
+*.iws
+
+# Build output (Maven, Gradle)
+/target/
+/build/
+
+# Log files
+*.log
+
+# OS-specific files (macOS, Windows)
+/.DS_Store        # macOS Finder metadata
+Thumbs.db         # Windows thumbnail cache
+
+# Local configuration files
+/workspace.xml
+/dataSources.local.xml
+
+# Temporary files
+*.tmp             # Temporary files
+*.swp             # Vim temporary files
