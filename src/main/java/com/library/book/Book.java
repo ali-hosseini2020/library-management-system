@@ -16,7 +16,6 @@ import lombok.*;
 @EqualsAndHashCode
 @ToString
 @Builder
-//import jakarta.persistence.*;
 
 public class Book {
     @Id
