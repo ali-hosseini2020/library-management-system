@@ -14,3 +14,4 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
     @Query("SELECT a FROM Author a WHERE a.firstName LIKE %:firstName% OR a.lastName LIKE %:lastName%")
     List<Author> findByFirstNameOrLastNameContaining(@Param("firstName") String firstName, @Param("lastName") String lastName);
 }
+
