@@ -1,7 +1,5 @@
 package com.library.user.service;
-
 import com.library.user.dto.UserDTO;
-
 import java.util.List;
 
 public interface UserService {
