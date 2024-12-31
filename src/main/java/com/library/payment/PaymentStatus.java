@@ -2,11 +2,9 @@ package com.library.payment;
 import com.library.customizedenum.PaymentStatusType;
 import lombok.*;
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
-@Table(name = "payments")
+@Table(name = "payment_status")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -14,22 +12,15 @@ import java.util.List;
 @EqualsAndHashCode
 @ToString
 @Builder
-public class Payment {
+public class PaymentStatus {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDateTime paymentDate;
-    private Double amount;
-
     @Enumerated(EnumType.STRING)
     private PaymentStatusType status;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private PaymentUser user;
-
-    @OneToMany(mappedBy = "payment", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<PaymentHistory> history;
+    @OneToOne
+    @JoinColumn(name = "payment_id")
+    private Payment payment;
 }
-

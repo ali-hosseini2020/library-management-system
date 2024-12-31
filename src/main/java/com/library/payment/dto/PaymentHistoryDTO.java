@@ -2,7 +2,6 @@ package com.library.payment.dto;
 import com.library.customizedenum.PaymentStatusType;
 import lombok.*;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Getter
 @Setter
@@ -11,11 +10,10 @@ import java.util.List;
 @EqualsAndHashCode
 @ToString
 @Builder
-public class PaymentDTO {
+public class PaymentHistoryDTO {
     private Long id;
-    private LocalDateTime paymentDate;
-    private Double amount;
+    private Long paymentId;
+    private LocalDateTime actionDate;
     private PaymentStatusType status;
-    private PaymentUserDTO user;
-    private List<PaymentHistoryDTO> history;
+    private String notes;
 }
