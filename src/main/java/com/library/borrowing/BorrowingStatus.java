@@ -24,4 +24,6 @@ public class BorrowingStatus {
     @OneToOne
     @JoinColumn(name = "borrowing_id")
     private Borrowing borrowing;
+
+
 }
